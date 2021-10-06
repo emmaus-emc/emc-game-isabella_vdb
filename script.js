@@ -56,7 +56,7 @@ var tekenAlles = function () {
   // kogel
 
   // speler
-  fill("white");
+  fill("purple");
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
@@ -87,7 +87,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('lightblue');
 }
 
 /**
