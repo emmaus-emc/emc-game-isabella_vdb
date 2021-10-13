@@ -31,17 +31,31 @@ var beweegAlles = function () {
   // kogel
 
   // speler
-  if(keyIsDown(RIGHT_ARROW)){
+  if (keyIsDown(RIGHT_ARROW)) {
     spelerX = spelerX + 7;
   }
-  if(keyIsDown(LEFT_ARROW)){
+  if (keyIsDown(LEFT_ARROW)) {
     spelerX = spelerX - 7;
   }
-  if(keyIsDown(UP_ARROW)){
+  if (keyIsDown(UP_ARROW)) {
     spelerY = spelerY - 7;
   }
-  if(keyIsDown(DOWN_ARROW)){
+  if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 7;
+  }
+
+  // beperk begweging tot rand
+  if (spelerX > 1280) {
+    spelerX = 1280;
+  }
+  if(spelerX < 0){
+    spelerX = 0;
+  }
+  if(spelerY > 720){
+    spelerY = 720;
+  }
+  if(spelerY < 0){
+    spelerY = 0;
   }
 };
 
@@ -55,10 +69,6 @@ var verwerkBotsing = function () {
 
   // botsing kogel tegen vijand
 
-  //botsing speler buiten canvas
- if(spelerX > 1280){
- spelerX = spelerX - 1;
- }
 };
 
 /**
@@ -67,7 +77,7 @@ var verwerkBotsing = function () {
 var tekenAlles = function () {
   // achtergrond
   fill("lightblue")
- rect(0,0,1280,720);
+  rect(0, 0, 1280, 720);
   // vijand
 
   // kogel
