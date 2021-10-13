@@ -30,7 +30,18 @@ var beweegAlles = function () {
   // kogel
 
   // speler
-
+  if(keyIsDown(RIGHT_ARROW)){
+    spelerX = spelerX + 7;
+  }
+  if(keyIsDown(LEFT_ARROW)){
+    spelerX = spelerX - 7;
+  }
+  if(keyIsDown(UP_ARROW)){
+    spelerY = spelerY - 7;
+  }
+  if(keyIsDown(DOWN_ARROW)){
+    spelerY = spelerY + 7;
+  }
 };
 
 /**
