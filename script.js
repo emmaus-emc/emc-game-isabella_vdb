@@ -15,9 +15,9 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
-var spelerY = 600;
-var speelveldLinks = 0; // y-positie van speler
-
+var spelerY = 600; // y-positie van speler
+var vijandX = 600;
+var vijandY = 0;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -27,7 +27,7 @@ var speelveldLinks = 0; // y-positie van speler
  */
 var beweegAlles = function () {
   // vijand
-
+  
   // kogel
 
   // speler
@@ -79,12 +79,13 @@ var tekenAlles = function () {
   fill("lightblue")
   rect(0, 0, 1280, 720);
   // vijand
-
+  fill("gold")
+  ellipse(vijandX, vijandY, 50, 50);
   // kogel
 
   // speler
   fill("purple");
-  ellipse(spelerX, spelerY, 70, 70);
+  ellipse(spelerX, spelerY, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
 

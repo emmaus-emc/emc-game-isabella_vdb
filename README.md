@@ -24,8 +24,8 @@ Optioneel: extra onderdelen, je kunt die overslaan<br>
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 3. beweeg speler met pijltjetoetsen
         - Gebruik de functie keyIsDown() om te kijken welke toets is ingedrukt
-- [ ] 4. beperk beweging tot schermranden
-- [ ] 5. tekenVijand
+- [x] 4. beperk beweging tot schermranden
+- [x] 5. tekenVijand
         - De afmeting van de vijand is 50x50 pixels
         - Gebruik twee variabelen vijandX en vijandY die het midden van de vijand aanwijzen
 - [ ] 6. beweegVijand vallend
