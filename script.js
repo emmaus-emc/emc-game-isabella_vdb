@@ -15,7 +15,8 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+var spelerY = 600;
+var speelveldLinks = 0; // y-positie van speler
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -54,6 +55,10 @@ var verwerkBotsing = function () {
 
   // botsing kogel tegen vijand
 
+  //botsing speler buiten canvas
+ if(spelerX > 1280){
+ spelerX = spelerX - 1;
+ }
 };
 
 /**
@@ -69,7 +74,7 @@ var tekenAlles = function () {
 
   // speler
   fill("purple");
-  rect(spelerX - 25, spelerY - 25, 50, 50);
+  ellipse(spelerX, spelerY, 70, 70);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
 

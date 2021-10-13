@@ -19,10 +19,10 @@ Geef aan met [x] welke onderdelen af zijn
 ### Basisstappen
 Optioneel: extra onderdelen, je kunt die overslaan<br>
 - [x] 1. maak index.html, style.css en script.js met canvas
-- [ ] 2. teken speler
+- [x] 2. teken speler
         - Maak de afmeting van de speler 50x50 pixels
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [ ] 3. beweeg speler met pijltjetoetsen
+- [x] 3. beweeg speler met pijltjetoetsen
         - Gebruik de functie keyIsDown() om te kijken welke toets is ingedrukt
 - [ ] 4. beperk beweging tot schermranden
 - [ ] 5. tekenVijand
