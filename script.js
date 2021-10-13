@@ -27,7 +27,7 @@ var vijandY = 0;
  */
 var beweegAlles = function () {
   // vijand
-  
+  vijandY = vijandY + 7;
   // kogel
 
   // speler
