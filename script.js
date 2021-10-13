@@ -28,6 +28,10 @@ var vijandY = 0;
 var beweegAlles = function () {
   // vijand
   vijandY = vijandY + 7;
+
+  if (vijandY > 720){
+    vijandY = 0;
+  }
   // kogel
 
   // speler

@@ -29,7 +29,7 @@ Optioneel: extra onderdelen, je kunt die overslaan<br>
         - De afmeting van de vijand is 50x50 pixels
         - Gebruik twee variabelen vijandX en vijandY die het midden van de vijand aanwijzen
 - [x] 6. beweegVijand vallend
-- [ ] 7. zet vijand bovenaan als gevallen
+- [x] 7. zet vijand bovenaan als gevallen
     De afmeting van het scherm vind je in de setup() functie
 - [ ] 8. console-bericht bij botsing speler-vijand
     Gebruikt console.log om iets op de console te schrijven
