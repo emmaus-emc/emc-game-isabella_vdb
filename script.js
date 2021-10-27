@@ -18,7 +18,7 @@ var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var vijandX = 600;
 var vijandY = 0;
-var hp = 500;
+var hp = 50;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -73,6 +73,8 @@ var verwerkBotsing = function () {
   // botsing speler tegen vijand
 if(vijandX-spelerX>-50&&vijandY-spelerY>-50&&vijandX-spelerX<50&&vijandY-spelerY>50){
   console.log("botsing");
+  hp=hp-1;
+  console.log(hp);
 };
   // botsing kogel tegen vijand
 
