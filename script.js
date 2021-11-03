@@ -114,6 +114,9 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
+  if(hp==0){
+    return true
+  };
   return false;
 };
 
@@ -150,6 +153,6 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-
+    background("black")
   }
 }
