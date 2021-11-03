@@ -104,7 +104,8 @@ var tekenAlles = function () {
   text(hp,spelerX-100, spelerY);
 
   textSize(100);
-  text('punten', 50, 100)
+  punten=punten+1/50
+ text('punten: \n' + floor(punten), 20, 100);
 
 };
 
