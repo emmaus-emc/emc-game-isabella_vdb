@@ -19,6 +19,7 @@ var spelerY = 600; // y-positie van speler
 var vijandX = 600;
 var vijandY = 0;
 var hp = 50;
+var punten = 0;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -85,7 +86,7 @@ if(vijandX-spelerX>-50&&vijandY-spelerY>-50&&vijandX-spelerX<50&&vijandY-spelerY
  */
 var tekenAlles = function () {
   // achtergrond
-  fill("lightblue")
+  fill("turquoise")
   rect(0, 0, 1280, 720);
   // vijand
   fill("gold")
@@ -93,12 +94,17 @@ var tekenAlles = function () {
   // kogel
 
   // speler
-  fill("purple");
+  fill("violet");
   ellipse(spelerX, spelerY, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
 
   // punten en health
+  textSize(50);
+  text(hp,spelerX-100, spelerY);
+
+  textSize(100);
+  text('punten', 50, 100)
 
 };
 
