@@ -42,7 +42,7 @@ Optioneel: extra onderdelen, je kunt die overslaan<br>
         - Gebruik variabelen vijandX1, vijandX2 enzovoort
         - Zet de vijanden op dezelfde hoogte op de y-as
         - Gebruik een afstand van 150 pixels op de x-as tussen twee vijanden
-- [ ] 14. maak 3 vijanden op een rij met een loop
+- [x] 14. maak 3 vijanden op een rij met een loop
     Verander de code zodat er een loop gebruikt wordt
 - [ ] 15. maak 8 vijanden op een rij met een loop
         - Verander het aantal keer dat de loop wordt herhaald

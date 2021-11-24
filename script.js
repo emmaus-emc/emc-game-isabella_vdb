@@ -16,12 +16,8 @@ var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
-var vijandX = 600;
+var vijandX = 100;
 var vijandY = 0;
-var vijand2X = 900;
-var vijand2Y = 0
-var vijand3X = 300;
-var vijand3Y = 0;
 var hp = 50;
 var punten = 0;
 /* ********************************************* */
@@ -79,24 +75,13 @@ var beweegAlles = function () {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-if(vijandX-spelerX>-50&&vijandY-spelerY>-50&&vijandX-spelerX<50&&vijandY-spelerY>50){
+for(var i=0;i<8;i=i+1){
+if(vijandX+i*100-spelerX>-50&&vijandY-spelerY>-50&&vijandX+i*100-spelerX<50&&vijandY-spelerY>50){
   console.log("botsing");
   hp=hp-1;
   console.log(hp);
 };
-
-if(vijand2X-spelerX>-50&&vijand2Y-spelerY>-50&&vijand2X-spelerX<50&&vijand2Y-spelerY>50){
-  console.log("botsing");
-  hp=hp-1;
-  console.log(hp);
 };
-
-if(vijand3X-spelerX>-50&&vijand3Y-spelerY>-50&&vijand3X-spelerX<50&&vijand3Y-spelerY>50){
-  console.log("botsing");
-  hp=hp-1;
-  console.log(hp);
-};
-  // botsing kogel tegen vijand
 
 };
 
@@ -109,8 +94,8 @@ var tekenAlles = function () {
   rect(0, 0, 1280, 720);
   // vijand
   fill("gold")
-  for (var i=0; i<3; i=i+1) {
-     ellipse(vijandX+i*300, vijandY, 50, 50);
+  for (var i=0; i<8; i=i+1) {
+     ellipse(vijandX+i*100, vijandY, 50, 50);
   }
   // kogel
 
