@@ -16,7 +16,7 @@ var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
-var vijandX = 100;
+var vijandX =[100,200,400,610,700,770,950,1050];
 var vijandY = 0;
 var hp = 50;
 var punten = 0;
@@ -76,7 +76,7 @@ var beweegAlles = function () {
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
 for(var i=0;i<8;i=i+1){
-if(vijandX+i*100-spelerX>-50&&vijandY-spelerY>-50&&vijandX+i*100-spelerX<50&&vijandY-spelerY>50){
+if(vijandX[i]-spelerX>-50&&vijandY-spelerY>-50&&vijandX[i]-spelerX<50&&vijandY-spelerY>50){
   console.log("botsing");
   hp=hp-1;
   console.log(hp);
@@ -95,9 +95,11 @@ var tekenAlles = function () {
   // vijand
   fill("gold")
   for (var i=0; i<8; i=i+1) {
-     ellipse(vijandX+i*100, vijandY, 50, 50);
+     ellipse(vijandX[i], vijandY, 50, 50);
   }
   // kogel
+ fill("purple")
+ ellipse(500,500, 50,50);
 
   // speler
   fill("violet");
@@ -162,7 +164,7 @@ function draw() {
     background("black");
     textSize(160);
     fill("red");
-    text('GAMEOVER' ,210, 400);
+    text('GAMEOVER' ,200, 400);
     textSize(70);
     fill("white");
     text('score:'+ floor(punten), 350, 520);
