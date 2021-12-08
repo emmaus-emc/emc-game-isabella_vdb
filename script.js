@@ -9,7 +9,7 @@
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
-const SPACE=32;
+const SPACE = 32;
 
 const SPELEN = 1;
 const GAMEOVER = 2;
@@ -19,9 +19,9 @@ var spelerX = 600; // x-positie van speler
 var spelerY = 600;
 var kogelX = 600;
 var kogelY = 500; // y-positie van speler
-var vijandX =[100,200,400,610,700,770,950,1050];
+var vijandX = [100, 200, 400, 610, 700, 770, 950, 1050];
 var vijandY = 0;
-var vijandYarray =[0,0,0,0,0,0,0,0];
+var vijandYarray = [0, 0, 0, 0, 0, 0, 0, 0];
 var hp = 50;
 var punten = 0;
 /* ********************************************* */
@@ -34,18 +34,18 @@ var punten = 0;
 var beweegAlles = function () {
   // vijand
   vijandY = vijandY + 7;
- kogelY = kogelY - 7;
+  kogelY = kogelY - 7;
 
-  if (vijandY > 720){
+  if (vijandY > 720) {
     vijandY = 0;
   };
 
-  
+
   // kogel
-if (keyIsDown(SPACE)) {
-     kogelX = spelerX;
-     kogelY = spelerY-50;
-};
+  if (keyIsDown(SPACE)) {
+    kogelX = spelerX;
+    kogelY = spelerY - 50;
+  };
 
   // speler
   if (keyIsDown(RIGHT_ARROW)) {
@@ -65,13 +65,13 @@ if (keyIsDown(SPACE)) {
   if (spelerX > 1280) {
     spelerX = 1280;
   }
-  if(spelerX < 0){
+  if (spelerX < 0) {
     spelerX = 0;
   }
-  if(spelerY > 720){
+  if (spelerY > 720) {
     spelerY = 720;
   }
-  if(spelerY < 0){
+  if (spelerY < 0) {
     spelerY = 0;
   }
 };
@@ -83,18 +83,21 @@ if (keyIsDown(SPACE)) {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-for(var i=0;i<8;i=i+1){
-if(vijandX[i]-spelerX>-50&&vijandY-spelerY>-50&&vijandX[i]-spelerX<50&&vijandY-spelerY>50){
-  console.log("botsing");
-  hp=hp-1;
-  console.log(hp);
-};
-};
-for(var i=0;i<8;i=i+1){
-if(vijandX[i]-kogelX>-50&&vijandY-kogelY>-50&&vijandX[i]-kogelX<50&&vijandY-kogelY>50){
-  console.log("botsingkogel");
-};
-};
+  for (var i = 0; i < 8; i = i + 1) {
+    if (vijandX[i] - spelerX > -50 && vijandY - spelerY > -50 && vijandX[i] - spelerX < 50 && vijandY - spelerY < 50) {
+      console.log("botsing");
+      hp = hp - 1;
+      console.log(hp);
+    };
+  };
+  for (var i = 0; i < 8; i = i + 1) {
+    if (vijandX[i] - kogelX > -50 &&
+      vijandY      - kogelY > -50 &&
+      vijandX[i]   - kogelX < 50 &&
+      vijandY      - kogelY < 50) {
+      console.log("botsingkogel");
+    };
+  };
 
 };
 
@@ -108,12 +111,12 @@ var tekenAlles = function () {
   rect(0, 0, 1280, 720);
   // vijand
   fill("gold")
-  for (var i=0; i<8; i=i+1) {
-     ellipse(vijandX[i], vijandY, 50, 50);
+  for (var i = 0; i < 8; i = i + 1) {
+    ellipse(vijandX[i], vijandY, 50, 50);
   }
   // kogel
- fill("purple");
- ellipse(kogelX,kogelY, 50,50);
+  fill("purple");
+  ellipse(kogelX, kogelY, 50, 50);
 
   // speler
   fill("violet");
@@ -123,11 +126,11 @@ var tekenAlles = function () {
 
   // punten en health
   textSize(50);
-  text(hp,spelerX-100, spelerY);
+  text(hp, spelerX - 100, spelerY);
 
   textSize(100);
-  punten=punten+1/50
- text('punten: \n' + floor(punten), 20, 100);
+  punten = punten + 1 / 50
+  text('punten: \n' + floor(punten), 20, 100);
 
 };
 
@@ -136,7 +139,7 @@ var tekenAlles = function () {
  * anders return false
  */
 var checkGameOver = function () {
-  if(hp==0){
+  if (hp == 0) {
     return true
   };
   return false;
@@ -178,11 +181,11 @@ function draw() {
     background("black");
     textSize(160);
     fill("red");
-    text('GAMEOVER' ,200, 400);
+    text('GAMEOVER', 200, 400);
     textSize(70);
     fill("white");
-    text('score:'+ floor(punten), 350, 520);
+    text('score:' + floor(punten), 350, 520);
 
-    
+
   }
 }
