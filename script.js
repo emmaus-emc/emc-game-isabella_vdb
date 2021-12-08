@@ -21,7 +21,7 @@ var kogelX = 600;
 var kogelY = 500; // y-positie van speler
 var vijandX =[100,200,400,610,700,770,950,1050];
 var vijandY = 0;
-var vijandYarray[0,0,0,0,0,0,0,0];
+var vijandYarray =[0,0,0,0,0,0,0,0];
 var hp = 50;
 var punten = 0;
 /* ********************************************* */
@@ -34,7 +34,7 @@ var punten = 0;
 var beweegAlles = function () {
   // vijand
   vijandY = vijandY + 7;
- kogelY = kogelY - 8;
+ kogelY = kogelY - 7;
 
   if (vijandY > 720){
     vijandY = 0;
@@ -90,13 +90,14 @@ if(vijandX[i]-spelerX>-50&&vijandY-spelerY>-50&&vijandX[i]-spelerX<50&&vijandY-s
   console.log(hp);
 };
 };
-
 for(var i=0;i<8;i=i+1){
 if(vijandX[i]-kogelX>-50&&vijandY-kogelY>-50&&vijandX[i]-kogelX<50&&vijandY-kogelY>50){
   console.log("botsingkogel");
 };
 };
+
 };
+
 
 /**
  * Tekent spelscherm
