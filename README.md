@@ -48,8 +48,8 @@ Optioneel: extra onderdelen, je kunt die overslaan<br>
         - Verander het aantal keer dat de loop wordt herhaald
 - [x] 16. optioneel: maak 8 vijanden op willekeurige plekken met een loop en array
 - [x] 17. tekenKogel ergens
-- [ ] 18. zet kogel bij speler als spatie wordt ingedrukt
-- [ ] 19. beweegKogel omhoog
+- [x] 18. zet kogel bij speler als spatie wordt ingedrukt
+- [x] 19. beweegKogel omhoog
 - [ ] 20. console-bericht bij botsing kogel-vijand
 - [ ] 21. verwijder kogel en vijand als geraakt
 - [ ] 22. optioneel: maak 10 kogels met loop en array

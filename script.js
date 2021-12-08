@@ -9,13 +9,16 @@
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
+const SPACE=32;
 
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+var spelerY = 600;
+var kogelX = 600;
+var kogelY = 500; // y-positie van speler
 var vijandX =[100,200,400,610,700,770,950,1050];
 var vijandY = 0;
 var hp = 50;
@@ -30,7 +33,7 @@ var punten = 0;
 var beweegAlles = function () {
   // vijand
   vijandY = vijandY + 7;
- 
+ kogelY = kogelY - 8;
 
   if (vijandY > 720){
     vijandY = 0;
@@ -38,6 +41,10 @@ var beweegAlles = function () {
 
   
   // kogel
+if (keyIsDown(SPACE)) {
+     kogelX = spelerX;
+     kogelY = spelerY-50;
+};
 
   // speler
   if (keyIsDown(RIGHT_ARROW)) {
@@ -98,8 +105,8 @@ var tekenAlles = function () {
      ellipse(vijandX[i], vijandY, 50, 50);
   }
   // kogel
- fill("purple")
- ellipse(500,500, 50,50);
+ fill("purple");
+ ellipse(kogelX,kogelY, 50,50);
 
   // speler
   fill("violet");
