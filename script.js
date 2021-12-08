@@ -21,6 +21,7 @@ var kogelX = 600;
 var kogelY = 500; // y-positie van speler
 var vijandX =[100,200,400,610,700,770,950,1050];
 var vijandY = 0;
+var vijandYarray[0,0,0,0,0,0,0,0];
 var hp = 50;
 var punten = 0;
 /* ********************************************* */
@@ -90,6 +91,11 @@ if(vijandX[i]-spelerX>-50&&vijandY-spelerY>-50&&vijandX[i]-spelerX<50&&vijandY-s
 };
 };
 
+for(var i=0;i<8;i=i+1){
+if(vijandX[i]-kogelX>-50&&vijandY-kogelY>-50&&vijandX[i]-kogelX<50&&vijandY-kogelY>50){
+  console.log("botsingkogel");
+};
+};
 };
 
 /**
